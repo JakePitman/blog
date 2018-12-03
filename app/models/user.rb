@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one :username, autosave: true, dependent: :destroy
+  has_many :posts
   accepts_nested_attributes_for :username, allow_destroy: true
 
   validate :username_provided

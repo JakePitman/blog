@@ -1,0 +1,10 @@
+<h1>All Posts</h1>
+
+<% if current_user.admin? %>
+  <div>
+    <%= link_to 'New Post', new_post_path %>
+  </div>
+<% end %>
+
+
+<%= render @posts %>

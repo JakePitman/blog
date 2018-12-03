@@ -1,0 +1,14 @@
+<% if current_user.admin %>
+  <div>
+    <%= link_to 'Edit', edit_post_path(@post) %>
+  </div>
+<% end %>
+<h1><%= @post.title %></h1>
+<h2><%= @post.content %></h2>
+<h3><%= @post.user.username.name %></h3>
+
+<hr>
+
+<div>
+  <%= link_to 'All Posts', posts_path %>
+</div>
