@@ -1,8 +1,7 @@
 class PostPolicy < ApplicationPolicy
-  attr_reader :user
 
-  def initialize(user)
-    @user = user
+  def create?
+    user.admin?
   end
 
   def update?
