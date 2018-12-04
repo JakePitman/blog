@@ -1,4 +1,4 @@
 <hr>
 <h2><%= link_to post.title, post %></h2>
 <h3><%= post.subtitle %></h3>
-<h4><%= post.user.username.name %></h4>
+<%= render 'timestamp', post: post %>
