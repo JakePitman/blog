@@ -31,9 +31,9 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
-  <%= f.fields_for :username_attributes do |username_fields| %>
-      <%= username_fields.label :name %><br />
-      <%= username_fields.text_field :name %>
+  <%= f.fields_for :profile_attributes do |profile_fields| %>
+      <%= profile_fields.label :name %><br />
+      <%= profile_fields.text_field :name %>
   <% end %>
   
   <div class="actions">

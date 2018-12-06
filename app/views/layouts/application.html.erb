@@ -15,7 +15,7 @@
 
     <% if current_user %>
       <%= 'ADMIN' if current_user.admin %>
-      <%= current_user.username.name %>
+      <%= current_user.profile.name %>
       |
       <%= link_to 'sign out', destroy_user_session_path, method: 'delete' %>
       |
