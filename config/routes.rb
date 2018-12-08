@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   get 'topic/:id/edit', to: 'topics#edit', as: 'edit_topic'
   patch 'topic/:id', to: 'topics#update'
 
+  get 'profile/:id', to: 'profiles#show', as: 'profile'
+  get 'profile/:id/edit', to: 'profiles#edit', as: 'edit_profile'
+  patch 'profile/:id', to: 'profiles#update'
+
   root to: 'pages#home'
 end

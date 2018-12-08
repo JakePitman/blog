@@ -1,0 +1,7 @@
+<h1><%= @profile.name %></h1>
+
+<% @profile.topics.each do |topic| %>
+  <hr>
+  <h2><%= link_to topic.title, topic %></h2>
+  <h3><%= topic.description %></h3>
+<% end %>
