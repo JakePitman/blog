@@ -1,0 +1,14 @@
+<%= form_for @topic do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: 'title' %>
+  </div>
+
+  <div>
+    <%= f.text_area :description, placeholder: 'description' %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>
