@@ -10,7 +10,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    #@topic = params.require(:topic)
   end
 
   def create
