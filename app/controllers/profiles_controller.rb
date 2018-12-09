@@ -34,6 +34,7 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.fetch(:profile, {})
+      #params.fetch(:profile, {})
+      params.require(:profile).permit(:name)
     end
 end

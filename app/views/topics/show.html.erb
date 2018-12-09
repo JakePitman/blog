@@ -1,2 +1,6 @@
 <h1><%= @topic.title %></h1>
-<h1><%= @topic.description %></h1>
+<h2><%= @topic.description %></h2>
+
+<%= link_to 'edit topic', edit_topic_path %>
+|
+<%= link_to 'new post', new_post_path(topic: @topic) %>
