@@ -1,10 +1,15 @@
 class PostPolicy < ApplicationPolicy
 
+  def initialize(user, post)
+    @user = user
+    @post = post
+  end
+
   def create?
-    user.admin?
+    user.profile.topics.include?(@post.topic)
   end
 
   def update?
-    user.admin?
+    user.profile.topics.include?(@post.topic)
   end
 end

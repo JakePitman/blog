@@ -1,2 +1,12 @@
 <h1><%= @topic.title %></h1>
-<h1><%= @topic.description %></h1>
+<h2><%= @topic.description %></h2>
+
+<h1>Posts in this topic</h1>
+<% @topic.posts.each do |post| %>
+  <h3><%= link_to post.title, post %></h3>
+  <p><%= post.subtitle %></p>
+<% end %>
+
+<%= link_to 'edit topic', edit_topic_path %>
+|
+<%= link_to 'new post', new_post_path(topic: @topic) %>

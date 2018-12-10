@@ -1,0 +1,14 @@
+<h1><%= @profile.name %></h1>
+
+<br>
+
+<h1>My Topics</h1>
+
+<% @profile.topics.each do |topic| %>
+  <h2><%= link_to topic.title, topic %></h2>
+  <h3><%= topic.description %></h3>
+  <hr>
+<% end %>
+
+<br>
+<%= link_to 'new topic', new_topic_path %>

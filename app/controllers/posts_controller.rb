@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.user = current_user
+    @post.profile = current_user.profile
     authorize @post
 
     respond_to do |format|
@@ -46,6 +46,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :subtitle, :content)
+    params.require(:post).permit(:title, :subtitle, :content, :topic_id)
   end
 end
