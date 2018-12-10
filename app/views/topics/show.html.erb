@@ -3,7 +3,7 @@
 
 <h1>Posts in this topic</h1>
 <% @topic.posts.each do |post| %>
-  <h3><%= post.title %></h3>
+  <h3><%= link_to post.title, post %></h3>
   <p><%= post.subtitle %></p>
 <% end %>
 
