@@ -8,6 +8,9 @@
 <% end %>
 
 <p><%= link_to 'new post', new_post_path(topic: @topic) %></p>
-<%= link_to 'edit topic', edit_topic_path %>
-|
-<%= link_to 'delete topic', @topic, method: :delete, data: { confirm: 'are you sure?' } %>
+
+<% if @topic.profile.user == current_user %>
+  <%= link_to 'edit topic', edit_topic_path %>
+  |
+  <%= link_to 'delete topic', @topic, method: :delete, data: { confirm: 'Are you sure? All posts in this topic will also be deleted' } %>
+<% end %>

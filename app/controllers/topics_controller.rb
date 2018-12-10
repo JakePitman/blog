@@ -29,6 +29,7 @@ class TopicsController < ApplicationController
   end
 
   def update
+    authorize(@topic)
     respond_to do |format|
       if @topic.update(topic_params)
         format.html { redirect_to @topic }
@@ -39,6 +40,7 @@ class TopicsController < ApplicationController
   end
 
   def destroy
+    authorize(@topic)
     @topic.destroy
     redirect_to profile_path(current_user.profile)
   end
