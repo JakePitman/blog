@@ -7,6 +7,7 @@
   <p><%= post.subtitle %></p>
 <% end %>
 
+<p><%= link_to 'new post', new_post_path(topic: @topic) %></p>
 <%= link_to 'edit topic', edit_topic_path %>
 |
-<%= link_to 'new post', new_post_path(topic: @topic) %>
+<%= link_to 'delete topic', @topic, method: :delete, data: { confirm: 'are you sure?' } %>

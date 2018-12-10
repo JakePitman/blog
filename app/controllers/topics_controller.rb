@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update]
+  before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def show
   end
@@ -36,6 +36,11 @@ class TopicsController < ApplicationController
         format.html { render edit }
       end
     end
+  end
+
+  def destroy
+    @topic.destroy
+    redirect_to profile_path(current_user.profile)
   end
 
   private

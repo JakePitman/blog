@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post 'topics', to: 'topics#create'
   get 'topic/:id/edit', to: 'topics#edit', as: 'edit_topic'
   patch 'topic/:id', to: 'topics#update'
+  delete 'topic/:id', to: 'topics#destroy'
 
   get 'profile/:id', to: 'profiles#show', as: 'profile'
   get 'profile/:id/edit', to: 'profiles#edit', as: 'edit_profile'
