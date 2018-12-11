@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def show
   end
@@ -30,12 +30,23 @@ class PostsController < ApplicationController
   end
 
   def update
+    authorize(@post)
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post }
       else
-        format.html { render edit }
+        format.html { redirect_to @post }
+        #format.html { render edit }
       end
+    end
+  end
+
+  def destroy
+    authorize(@post)
+    @post.destroy
+    topic = @post.topic
+    respond_to do |format|
+      format.html { redirect_to topic_path(topic) }
     end
   end
 

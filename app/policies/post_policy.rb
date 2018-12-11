@@ -10,6 +10,10 @@ class PostPolicy < ApplicationPolicy
   end
 
   def update?
-    user.profile.topics.include?(@post.topic)
+    @post.profile.user == user
+  end
+
+  def destroy?
+    @post.profile.user == user
   end
 end
