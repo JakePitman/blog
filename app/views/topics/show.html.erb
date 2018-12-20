@@ -5,6 +5,7 @@
 <% @topic.posts.each do |post| %>
   <h3><%= link_to post.title, post %></h3>
   <p><%= post.subtitle %></p>
+  <%= render 'shared/timestamp', post: post %>
 <% end %>
 
 <p><%= link_to 'new post', new_post_path(topic: @topic) %></p>
