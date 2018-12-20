@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   get 'profile/:id/edit', to: 'profiles#edit', as: 'edit_profile'
   patch 'profile/:id', to: 'profiles#update'
 
-  root to: 'pages#home'
+  root to: 'pages#index'
+  match '*path', to: 'pages#index', via: :all
 end
