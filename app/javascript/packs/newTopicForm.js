@@ -49,7 +49,7 @@ class NewTopicForm extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggleActive}>***NEW TOPIC FORM***</button>
+        <button onClick={this.toggleActive}>new topic</button>
         {this.state.active ? <Form /> : null}
       </div>
     );
