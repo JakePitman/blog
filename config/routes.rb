@@ -23,5 +23,5 @@ Rails.application.routes.draw do
 
   get 'pages/home'
   root to: 'pages#home'
-  match '*path', to: 'pages#index', via: :all
+  #match '*path', to: 'pages#index', via: :all
 end
