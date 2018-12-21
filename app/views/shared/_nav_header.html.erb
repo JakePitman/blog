@@ -1,8 +1,10 @@
 <div class='nav-header-container'>
   <%= render 'shared/nav_header_lines' %>
   <% if current_user %>
-    <div class='nav-header-devise-links'>
-      <%= link_to 'sign out', destroy_user_session_path, method: 'delete' %>
+    <div class='nav-header-devise-links-container'>
+      <div class='nav-header-devise-links'>
+        <%= link_to 'sign out', destroy_user_session_path, method: 'delete' %>
+      </div>
     </div>
     <br>
     <h1 class='think-tank-title'>ThinkTank</h1>
@@ -18,10 +20,12 @@
       </h4>
     </div>
   <% else %>
-    <div class='nav-header-devise-links'>
-      <%= link_to 'sign in', new_user_session_path %>
-      |
-      <%= link_to 'sign up', new_user_registration_path %>
+    <div class='nav-header-devise-links-container'>
+      <div class='nav-header-devise-links'>
+        <%= link_to 'sign in', new_user_session_path %>
+        |
+        <%= link_to 'sign up', new_user_registration_path %>
+      </div>
     </div>
   <% end %>
 </div>
