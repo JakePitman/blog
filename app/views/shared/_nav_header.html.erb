@@ -1,0 +1,27 @@
+<div class='nav-header-container'>
+  <%= render 'shared/nav_header_lines' %>
+  <% if current_user %>
+    <div class='nav-header-devise-links'>
+      <%= link_to 'sign out', destroy_user_session_path, method: 'delete' %>
+    </div>
+    <br>
+    <h1 class='think-tank-title'>ThinkTank</h1>
+    <div class='nav-header-links'>
+      <h4 class='nav-header-link'>
+        <%= 'ADMIN' if current_user.admin %> <%= link_to current_user.profile.name, current_user.profile %>
+      </h4>
+      <h4 class='nav-header-link'>
+        <%= link_to 'Home', root_path %>
+      </h4>
+      <h4 class='nav-header-link'>
+        about
+      </h4>
+    </div>
+  <% else %>
+    <div class='nav-header-devise-links'>
+      <%= link_to 'sign in', new_user_session_path %>
+      |
+      <%= link_to 'sign up', new_user_registration_path %>
+    </div>
+  <% end %>
+</div>

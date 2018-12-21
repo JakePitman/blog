@@ -1,3 +1,61 @@
+* {
+  margin: 0;
+}
+
+.nav-header-container {
+  border: 1px solid black;
+  width: 100%;
+  position: relative;
+}
+
+.nav-header-lines-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: -1;
+}
+
+.nav-header-line {
+  opacity: 0.8;
+  width: 4px;
+  background: #c4c4c4;
+}
+.nav-header-line-1 {
+  height: 40px;
+}
+.nav-header-line-2 {
+  height: 50px;
+}
+.nav-header-line-3 {
+  height: 60px;
+}
+.nav-header-line-4 {
+  height: 70px;
+}
+.nav-header-line-5 {
+  height: 80px;
+}
+.nav-header-line-6 {
+  height: 90px;
+}
+
 .think-tank-title {
-  color: green;
+  font-family: 'Arial Narrow';
+  color: #4a7cff;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-header-devise-links {
+  text-align: right;
+}
+
+.nav-header-links {
+  display: flex;
+  justify-content: space-around;
 }
