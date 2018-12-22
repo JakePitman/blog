@@ -41,6 +41,24 @@
   height: 90px;
 }
 
+.notices {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+  margin: 5px;
+}
+
+.notices p {
+  background: rgba(247, 247, 247, 0.8);
+  box-shadow: 0 0 15px 5px rgba(247, 247, 247, 0.8);
+  text-align: center;
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
 .think-tank-title {
   font-family: 'Arial Narrow';
   color: #4a7cff;
@@ -54,6 +72,7 @@
 .nav-header-devise-links-container {
   display: flex;
   justify-content: flex-end;
+  z-index: 2;
 }
 .nav-header-devise-links {
   background: rgba(247, 247, 247, 0.8);

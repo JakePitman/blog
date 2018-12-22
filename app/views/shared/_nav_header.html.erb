@@ -1,5 +1,9 @@
 <div class='nav-header-container'>
   <%= render 'shared/nav_header_lines' %>
+  <div class='notices'>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
   <div class='nav-header-devise-links-container'>
     <div class='nav-header-devise-links'>
       <% if current_user %>
