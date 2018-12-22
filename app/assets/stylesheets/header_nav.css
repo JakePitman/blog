@@ -1,3 +1,108 @@
+* {
+  margin: 0;
+}
+
+.nav-header-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.nav-header-lines-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: -1;
+}
+
+.nav-header-line {
+  opacity: 0.8;
+  width: 4px;
+  background: #c4c4c4;
+}
+.nav-header-line-1 {
+  height: 40px;
+}
+.nav-header-line-2 {
+  height: 50px;
+}
+.nav-header-line-3 {
+  height: 60px;
+}
+.nav-header-line-4 {
+  height: 70px;
+}
+.nav-header-line-5 {
+  height: 80px;
+}
+.nav-header-line-6 {
+  height: 90px;
+}
+
 .think-tank-title {
-  color: green;
+  font-family: 'Arial Narrow';
+  color: #4a7cff;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-header-devise-links-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-header-devise-links {
+  background: rgba(247, 247, 247, 0.8);
+  box-shadow: 0 0 15px 5px rgba(247, 247, 247, 0.8);
+  text-align: center;
+  padding: 3px;
+  margin: 5px;
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
+.nav-header-devise-links a {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.nav-header-devise-links a:hover {
+  color: #4a7cff;
+}
+
+.nav-header-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-header-link {
+  width: 400px;
+  text-align: center;
+}
+
+.nav-header-link a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #c4c4c4;
+  font-family: 'Arial Narrow';
+  letter-spacing: 5px;
+  font-weight: lighter;
+  transition: all 0.5s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-header-link a:active,
+.nav-header-link a:hover {
+  color: #4a7cff;
+  border-bottom: 3px solid #4a7cff;
+}
+
+.nav-header-link .active {
+  color: #4a7cff;
+  border-bottom: 3px solid #4a7cff;
 }
