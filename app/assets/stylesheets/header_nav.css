@@ -7,6 +7,9 @@
   position: relative;
   margin-bottom: 50px;
 }
+.red-letter {
+  color: #dd2120;
+}
 
 .nav-header-lines-container {
   position: absolute;
