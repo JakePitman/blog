@@ -1,0 +1,107 @@
+.japanese-btn {
+  width: 400px;
+  height: 120px;
+  position: relative;
+  cursor: pointer;
+  transition: height 0.5s;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.japanese-btn-blue {
+  background: #7ff0ff;
+}
+
+.japanese-btn-yellow {
+  background: #ffe145;
+}
+
+.japanese-btn:hover .japanese-btn-inner-content {
+  color: #202020;
+}
+
+.japanese-btn:hover .inner-box-left {
+  transform: rotate(45deg);
+}
+
+.japanese-btn:hover .inner-box-right {
+  transform: rotate(-45deg);
+}
+
+.japanese-btn:hover .vertical-text {
+  top: 5px;
+}
+
+.japanese-btn:hover .horizontal-text-right {
+  right: 15px;
+}
+
+.japanese-btn:hover .horizontal-text-left {
+  left: 15px;
+}
+
+.inner-box {
+  width: 100px;
+  height: 100px;
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: all 0.5s;
+}
+
+.inner-box-left {
+  left: 30px;
+}
+
+.inner-box-right {
+  right: 30px;
+}
+
+.japanese-btn-inner-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*margin-auto;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: 'Bitter';
+  font-weight: lighter;
+  letter-spacing: 5px;
+  color: #6a6a6a;
+  letter-spacing: 5px;
+  font-weight: lighter;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: absolute;
+  top: -100%;
+  transition: all 0.7s;
+  font-size: 25px;
+}
+
+.vertical-text-left {
+  left: 10px;
+}
+
+.horizontal-text {
+  position: absolute;
+  bottom: 0;
+  transition: all 0.7s;
+}
+
+.horizontal-text-right {
+  right: -100%;
+}
+
+.horizontal-text-left {
+  left: -100%;
+}

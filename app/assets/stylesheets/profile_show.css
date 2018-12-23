@@ -3,6 +3,7 @@
   width: 500px;
   height: 120px;
   position: relative;
+  margin-top: 50px;
 }
 
 .bracket {
@@ -133,4 +134,52 @@
 .profile-page-link-inner-content a {
   color: #6a6a6a;
   text-decoration: none;
+}
+
+/*---------------------------------------NEW TOPIC FORM--------------------------------*/
+#new-topic-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-topic-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-topic-form-text,
+.new-topic-form-text-area {
+  font-family: 'Bitter';
+  text-align: center;
+  width: 1000px;
+  margin: 10px 0;
+}
+.new-topic-form-text {
+  font-size: 30px;
+  height: 50px;
+}
+
+.new-topic-form-text-area {
+  font-size: 20px;
+}
+
+.new-topic-form-submit {
+  width: 1000px;
+  cursor: pointer;
+  font-size: 40px;
+  font-family: 'Arial Narrow';
+  letter-spacing: 5px;
+  font-weight: lighter;
+  background-color: #c4c4c4;
+  color: #f7f7f7;
+  transition: all 0.5s;
+}
+
+.new-topic-form-submit:hover {
+  background-color: #ffe145;
+  color: #202020;
 }
