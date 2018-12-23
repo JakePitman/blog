@@ -16,27 +16,51 @@
   background: #ffe145;
 }
 
-.japanese-btn:hover .japanese-btn-inner-content {
+/*.japanese-btn:hover .japanese-btn-inner-content {*/
+/*color: #202020;*/
+/*}*/
+
+.japanese-btn-active .japanese-btn-inner-content {
   color: #202020;
 }
 
-.japanese-btn:hover .inner-box-left {
+/*.japanese-btn:hover .inner-box-left {*/
+/*transform: rotate(45deg);*/
+/*}*/
+
+.japanese-btn-active .inner-box-left {
   transform: rotate(45deg);
 }
 
-.japanese-btn:hover .inner-box-right {
+/*.japanese-btn:hover .inner-box-right {*/
+/*transform: rotate(-45deg);*/
+/*}*/
+
+.japanese-btn-active .inner-box-right {
   transform: rotate(-45deg);
 }
 
-.japanese-btn:hover .vertical-text {
+/*.japanese-btn:hover .vertical-text {*/
+/*top: 5px;*/
+/*}*/
+
+.japanese-btn-active .vertical-text {
   top: 5px;
 }
 
-.japanese-btn:hover .horizontal-text-right {
+/*.japanese-btn:hover .horizontal-text-right {*/
+/*right: 15px;*/
+/*}*/
+
+.japanese-btn-active .horizontal-text-right {
   right: 15px;
 }
 
-.japanese-btn:hover .horizontal-text-left {
+/*.japanese-btn:hover .horizontal-text-left {*/
+/*left: 15px;*/
+/*}*/
+
+.japanese-btn-active .horizontal-text-left {
   left: 15px;
 }
 

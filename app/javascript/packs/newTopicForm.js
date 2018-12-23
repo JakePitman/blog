@@ -48,7 +48,11 @@ class NewTopicForm extends React.Component {
     return (
       <React.Fragment>
         <div
-          className="japanese-btn japanese-btn-yellow"
+          className={
+            this.state.active
+              ? 'japanese-btn japanese-btn-yellow japanese-btn-active'
+              : 'japanese-btn japanese-btn-yellow'
+          }
           onClick={this.toggleActive}
         >
           <div className="inner-box inner-box-left" />
