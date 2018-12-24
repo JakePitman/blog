@@ -27,10 +27,11 @@
 
 <% @topic.posts.each do |post| %>
   <div class='post-card'>
+    <%= link_to '', post, class: 'post-card-link-box' %>
     <div class='post-card-title-container'>
       <div class='post-card-bracket post-card-bracket-top-left'></div>
       <div class='post-card-bracket post-card-bracket-bottom-right'></div>
-      <h3 class='post-card-title'><%= link_to character_limit(post.title, 80), post %></h3>
+      <h3 class='post-card-title'><%= character_limit(post.title, 80) %></h3>
     </div>
     <p class='post-card-subtitle'><%= post.subtitle %></p>
     <p class='post-card-timestamp'><%= render 'shared/timestamp', post: post %></p>

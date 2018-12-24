@@ -29,4 +29,11 @@ body {
 
 .timestamp-username-link {
   color: #4a7cff;
+  z-index: 2;
+  position: relative;
+  text-decoration: none;
+}
+
+.timestamp-username-link:hover {
+  text-decoration: underline;
 }
