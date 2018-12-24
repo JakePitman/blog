@@ -86,7 +86,7 @@
   top: 0;
 }
 
-.profile-page-link-container:hover .profile-page-link-inner-content a {
+.profile-page-link-container:hover .profile-page-link-inner-content {
   color: #202020;
 }
 
@@ -131,7 +131,7 @@
   animation-delay: all 1s;
 }
 
-.profile-page-link-inner-content a {
+.profile-page-link-inner-content {
   color: #6a6a6a;
   text-decoration: none;
 }

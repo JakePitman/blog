@@ -9,7 +9,7 @@
   <% @profile.topics.each do |topic| %>
       <div class='profile-page-link-container'>
         <div class='color-fill'></div>
-        <h2 class='profile-page-link-inner-content'><%= link_to character_limit(topic.title, 20), topic %></h2>
+        <%= link_to character_limit(topic.title, 20), topic, class: 'profile-page-link-inner-content' %>
       </div>
   <% end %>
 </div>
