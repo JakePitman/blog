@@ -26,3 +26,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.timestamp-username-link {
+  color: #4a7cff;
+}

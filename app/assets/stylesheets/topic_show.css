@@ -60,3 +60,113 @@
   text-align: center;
   padding: 20px;
 }
+
+/*-------------------------------POST-CARD------------------------*/
+
+.post-card {
+  border: 1px solid #c4c4c4;
+  padding: 10px 30px;
+  cursor: pointer;
+  width: 700px;
+  margin: 20px;
+}
+
+.post-card:hover .post-card-bracket {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+
+.post-card-title-container {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.post-card-bracket {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.post-card-bracket-top-left {
+  border-left: 3px solid #4a7cff;
+  border-top: 3px solid #4a7cff;
+  left: -10px;
+}
+
+.post-card-bracket-bottom-right {
+  bottom: 0;
+  right: -10px;
+  border-right: 3px solid #4a7cff;
+  border-bottom: 3px solid #4a7cff;
+}
+
+.post-card-title {
+  display: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: 'bitter';
+}
+
+.post-card-title a {
+  text-decoration: none;
+  text-align: center;
+  color: #202020;
+}
+
+.post-card-subtitle {
+  font-family: 'bitter';
+  color: #6a6a6a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.post-card-timestamp {
+  width: 100%;
+  text-align: center;
+}
+
+/*----------------------------------TOPIC-OPTIONS-LINKS----------------------------------*/
+.topic-options-links-container {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+}
+
+.topic-options-link-container {
+  width: 300px;
+  text-align: center;
+}
+
+.topic-options-link {
+  color: #c4c4c4;
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.topic-options-link:hover {
+  color: #4a7cff;
+  border-bottom: 1px solid #4a7cff;
+}
+
+.topic-options-link-separator {
+  color: #c4c4c4;
+  margin: 0 30px;
+  font-size: 40px;
+}

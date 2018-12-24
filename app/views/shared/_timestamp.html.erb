@@ -1,1 +1,1 @@
-<em><strong><%= post.profile.name %></strong> <%= post.created_at.strftime("%Y-%m-%d") %> ( <%= time_ago_in_words(post.created_at) %> ago)</em>
+<em><strong><%= link_to post.profile.name, post.profile, class: 'timestamp-username-link'%></strong> <%= post.created_at.strftime("%Y-%m-%d") %> ( <%= time_ago_in_words(post.created_at) %> ago)</em>

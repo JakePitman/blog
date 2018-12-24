@@ -10,17 +10,30 @@
   <h2 class='topic-description'><%= @topic.description %></h2>
 </div>
 
-<h1>Posts in this topic</h1>
-<% @topic.posts.each do |post| %>
-  <h3><%= link_to post.title, post %></h3>
-  <p><%= post.subtitle %></p>
-  <%= render 'shared/timestamp', post: post %>
-<% end %>
-
-<p><%= link_to 'new post', new_post_path(topic: @topic) %></p>
-
 <% if @topic.profile.user == current_user %>
-  <%= link_to 'edit topic', edit_topic_path %>
-  |
-  <%= link_to 'delete topic', @topic, method: :delete, data: { confirm: 'Are you sure? All posts in this topic will also be deleted' } %>
+  <div class='topic-options-links-container'> 
+    <span class='topic-options-link-container'><%= link_to 'edit topic', edit_topic_path, class: 'topic-options-link' %></span>
+    <span class='topic-options-link-separator'>|</span>
+    <span class='topic-options-link-container'><%= link_to 'delete topic', @topic, method: :delete, class: 'topic-options-link', data: { confirm: 'Are you sure? All posts in this topic will also be deleted' } %></span>
+  </div>
 <% end %>
+
+<div class='japanese-btn-hover japanese-btn-blue'>
+  <div class='inner-box inner-box-right'></div>
+  <h2 class='japanese-btn-inner-content'><%= link_to 'new post', new_post_path(topic: @topic) %></h2>
+  <p class='vertical-text vertical-text-right'>記事</p>
+  <p class='horizontal-text horizontal-text-left'>新しい</p>
+</div>
+
+<% @topic.posts.each do |post| %>
+  <div class='post-card'>
+    <div class='post-card-title-container'>
+      <div class='post-card-bracket post-card-bracket-top-left'></div>
+      <div class='post-card-bracket post-card-bracket-bottom-right'></div>
+      <h3 class='post-card-title'><%= link_to character_limit(post.title, 80), post %></h3>
+    </div>
+    <p class='post-card-subtitle'><%= post.subtitle %></p>
+    <p class='post-card-timestamp'><%= render 'shared/timestamp', post: post %></p>
+  </div>
+<% end %>
+

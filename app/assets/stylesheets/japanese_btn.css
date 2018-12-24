@@ -1,3 +1,4 @@
+/*---------------------------JAPANESE-BTN(Active)-----------------------------*/
 .japanese-btn {
   width: 400px;
   height: 120px;
@@ -16,49 +17,25 @@
   background: #ffe145;
 }
 
-/*.japanese-btn:hover .japanese-btn-inner-content {*/
-/*color: #202020;*/
-/*}*/
-
 .japanese-btn-active .japanese-btn-inner-content {
   color: #202020;
 }
-
-/*.japanese-btn:hover .inner-box-left {*/
-/*transform: rotate(45deg);*/
-/*}*/
 
 .japanese-btn-active .inner-box-left {
   transform: rotate(45deg);
 }
 
-/*.japanese-btn:hover .inner-box-right {*/
-/*transform: rotate(-45deg);*/
-/*}*/
-
 .japanese-btn-active .inner-box-right {
   transform: rotate(-45deg);
 }
-
-/*.japanese-btn:hover .vertical-text {*/
-/*top: 5px;*/
-/*}*/
 
 .japanese-btn-active .vertical-text {
   top: 5px;
 }
 
-/*.japanese-btn:hover .horizontal-text-right {*/
-/*right: 15px;*/
-/*}*/
-
 .japanese-btn-active .horizontal-text-right {
   right: 15px;
 }
-
-/*.japanese-btn:hover .horizontal-text-left {*/
-/*left: 15px;*/
-/*}*/
 
 .japanese-btn-active .horizontal-text-left {
   left: 15px;
@@ -116,6 +93,10 @@
   left: 10px;
 }
 
+.vertical-text-right {
+  right: 10px;
+}
+
 .horizontal-text {
   position: absolute;
   bottom: 0;
@@ -124,8 +105,50 @@
 
 .horizontal-text-right {
   right: -100%;
+  bottom: 10px;
 }
 
 .horizontal-text-left {
   left: -100%;
+  bottom: 10px;
+}
+
+/*-------------------------------------JAPANESE-BTN(Hover)-----------------------------------*/
+.japanese-btn-hover {
+  width: 400px;
+  height: 120px;
+  position: relative;
+  cursor: pointer;
+  transition: height 0.5s;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.japanese-btn-hover:hover .japanese-btn-inner-content {
+  color: #202020;
+}
+
+.japanese-btn-hover:hover .inner-box-left {
+  transform: rotate(45deg);
+}
+
+.japanese-btn-hover:hover .inner-box-right {
+  transform: rotate(-45deg);
+}
+
+.japanese-btn-hover:hover .vertical-text {
+  top: 10px;
+}
+
+.japanese-btn-hover:hover .horizontal-text-left {
+  left: 15px;
+}
+
+.japanese-btn-hover:hover a {
+  color: #202020;
+}
+
+.japanese-btn-hover a {
+  text-decoration: none;
+  color: #6a6a6a;
 }
