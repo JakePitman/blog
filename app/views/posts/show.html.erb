@@ -5,11 +5,22 @@
     <%= link_to 'delete', @post, method: :delete %>
   </div>
 <% end %>
-<h1><%= @post.title %></h1>
-<h2><%= @post.subtitle %></h2>
-<h3><%= @post.content %></h3>
 
-<%= render 'shared/timestamp', post: @post %>
+
+<h1 class='post-show-title'><%= @post.title %></h1>
+<div class='post-show-subtitle-container'>
+  <div class='bracket bracket-red-top-left'></div>
+  <div class='bracket bracket-red-bottom-right'></div>
+  <h2 class='post-show-subtitle'><%= @post.subtitle %></h2>
+</div>
+<div class='post-show-content-container'>
+  <div class='post-show-content-red-box'></div>
+  <h3 class='post-show-content'><%= @post.content %></h3>
+  <div class='post-show-timestamp-container'>
+    <%= render 'shared/timestamp', post: @post %>
+  </div>
+</div>
+
 
 <hr>
 

@@ -24,16 +24,16 @@
   border-bottom: 5px solid #4a7cff;
 }
 
-.bracket-yellow-top-left {
-  border-left: 5px solid #ffe145;
-  border-top: 5px solid #ffe145;
+.bracket-red-top-left {
+  border-left: 5px solid #dd2120;
+  border-top: 5px solid #dd2120;
 }
 
-.bracket-yellow-bottom-right {
+.bracket-red-bottom-right {
   bottom: 0;
   right: 0;
-  border-right: 5px solid #ffe145;
-  border-bottom: 5px solid #ffe145;
+  border-right: 5px solid #dd2120;
+  border-bottom: 5px solid #dd2120;
 }
 
 .subheading {
@@ -93,7 +93,7 @@
 .color-fill {
   width: 0%;
   height: 100%;
-  background: #ffe145;
+  background: rgba(221, 33, 32, 0.7);
   position: absolute;
   left: 0;
   right: 0;
@@ -180,6 +180,6 @@
 }
 
 .new-topic-form-submit:hover {
-  background-color: #ffe145;
+  background-color: rgba(221, 33, 32, 0.7);
   color: #202020;
 }
