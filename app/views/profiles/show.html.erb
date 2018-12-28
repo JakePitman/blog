@@ -5,6 +5,8 @@
   <h1 class='subheading'>My Topics</h1>
 </div>
 
+<div id='search-container' data=<%= @profile.topics.to_json %>></div>
+
 <div class='profile-page-links-container'>
   <% @profile.topics.each do |topic| %>
       <div class='profile-page-link-container'>
@@ -13,13 +15,19 @@
       </div>
   <% end %>
 </div>
-<%= javascript_pack_tag 'newTopicForm' %>
 <div id='new-topic-form-container'></div>
-
-<!--______________MY Friends_______________-->
 <div class='subheading-container'>
   <div class='bracket bracket-blue-top-left'></div>
   <div class='bracket bracket-blue-bottom-right'></div>
   <h1 class='subheading'>My Friends</h1>
 </div>
+
+<%= javascript_pack_tag 'search'  %>
+<%= javascript_pack_tag 'newTopicForm' %>
+<%= content_tag :div,
+  id: "topics-data",
+  data: @profile.topics.to_json do %>
+<% end %>
+
+<!--______________MY Friends_______________-->
 <br>
