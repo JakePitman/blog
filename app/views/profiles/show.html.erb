@@ -7,14 +7,6 @@
 
 <div id='search-container' data=<%= @profile.topics.to_json %>></div>
 
-<div class='profile-page-links-container'>
-  <% @profile.topics.each do |topic| %>
-      <div class='profile-page-link-container'>
-        <div class='color-fill'></div>
-        <%= link_to character_limit(topic.title, 20), topic, class: 'profile-page-link-inner-content' %>
-      </div>
-  <% end %>
-</div>
 <div id='new-topic-form-container'></div>
 <div class='subheading-container'>
   <div class='bracket bracket-blue-top-left'></div>
