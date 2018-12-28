@@ -50,8 +50,8 @@ class NewTopicForm extends React.Component {
         <div
           className={
             this.state.active
-              ? 'japanese-btn japanese-btn-yellow japanese-btn-active'
-              : 'japanese-btn japanese-btn-yellow'
+              ? 'japanese-btn japanese-btn-red japanese-btn-active'
+              : 'japanese-btn japanese-btn-red'
           }
           onClick={this.toggleActive}
         >
