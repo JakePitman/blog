@@ -62,8 +62,8 @@ body {
 }
 
 .options-link:hover {
-  color: rgba(221, 33, 32);
-  border-bottom: 1px solid rgba(221, 33, 32);
+  color: rgba(221, 33, 32, 1);
+  border-bottom: 1px solid rgba(221, 33, 32, 1);
 }
 
 .options-link-separator {
