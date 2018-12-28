@@ -1,8 +1,20 @@
 <% if current_user && @post.profile == current_user.profile %>
-  <div>
-    <%= link_to 'edit', edit_post_path(@post) %>
+  <div class='options-links-container'>
+    <div class='options-link-container'>
+      <%= link_to 'edit', edit_post_path(@post), class: 'options-link' %>
+    </div>
+    <div class='options-link-separator'>
     |
-    <%= link_to 'delete', @post, method: :delete %>
+    </div>
+    <div class='options-link-container'>
+      <%= link_to 'Back to topic', @post.topic, class: 'options-link' %>
+    </div>
+    <div class='options-link-separator'>
+    |
+    </div>
+    <div class='options-link-container'>
+      <%= link_to 'delete', @post, method: :delete, class: 'options-link' %>
+    </div>
   </div>
 <% end %>
 
@@ -24,6 +36,3 @@
 
 <hr>
 
-<div>
-  <%= link_to 'Back to topic', @post.topic %>
-</div>

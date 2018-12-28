@@ -11,10 +11,10 @@
 </div>
 
 <% if @topic.profile.user == current_user %>
-  <div class='topic-options-links-container'> 
-    <span class='topic-options-link-container'><%= link_to 'edit topic', edit_topic_path, class: 'topic-options-link' %></span>
-    <span class='topic-options-link-separator'>|</span>
-    <span class='topic-options-link-container'><%= link_to 'delete topic', @topic, method: :delete, class: 'topic-options-link', data: { confirm: 'Are you sure? All posts in this topic will also be deleted' } %></span>
+  <div class='options-links-container'> 
+    <span class='options-link-container'><%= link_to 'edit topic', edit_topic_path, class: 'options-link' %></span>
+    <span class='options-link-separator'>|</span>
+    <span class='options-link-container'><%= link_to 'delete topic', @topic, method: :delete, class: 'options-link', data: { confirm: 'Are you sure? All posts in this topic will also be deleted' } %></span>
   </div>
 <% end %>
 
