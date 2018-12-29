@@ -5,21 +5,21 @@
   <h1 class='subheading'>My Topics</h1>
 </div>
 
-<div class='profile-page-links-container'>
-  <% @profile.topics.each do |topic| %>
-      <div class='profile-page-link-container'>
-        <div class='color-fill'></div>
-        <%= link_to character_limit(topic.title, 20), topic, class: 'profile-page-link-inner-content' %>
-      </div>
-  <% end %>
-</div>
-<%= javascript_pack_tag 'newTopicForm' %>
-<div id='new-topic-form-container'></div>
+<div id='topics-search-container' class='search-container' data=<%= @profile.topics.to_json %>></div>
 
-<!--______________MY Friends_______________-->
+<div id='new-topic-form-container'></div>
 <div class='subheading-container'>
   <div class='bracket bracket-blue-top-left'></div>
   <div class='bracket bracket-blue-bottom-right'></div>
   <h1 class='subheading'>My Friends</h1>
 </div>
+
+<%= javascript_pack_tag 'search'  %>
+<%= javascript_pack_tag 'newTopicForm' %>
+<%= content_tag :div,
+  id: "topics-data",
+  data: @profile.topics.to_json do %>
+<% end %>
+
+<!--______________MY Friends_______________-->
 <br>
