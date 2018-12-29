@@ -28,7 +28,6 @@ class Search extends React.Component {
   }
 
   itemsOutput = () => {
-
     let searchItems = []
     this.state.searchItems.forEach(searchItem => {
       if ( this.state.searchInput == null || this.state.searchInput == '' || searchItem.title.toLowerCase().includes(this.state.searchInput.toLowerCase()) ) {
@@ -40,18 +39,21 @@ class Search extends React.Component {
         )
       }
     })
-
     return searchItems
   }
 
   render() {
     return (
-      <div className='profile-page-links-container'>
-        <input type='text' id='search-input' placeholder='search' onChange={this.updateSearchInput}/>
-        {
-          this.itemsOutput()
-        }
-      </div>
+      <React.Fragment>
+        <div className='search-bar-container'>
+          <input className='search-bar' type='text' id='search-input' placeholder='search' onChange={this.updateSearchInput}/>
+        </div>
+        <div className='profile-page-links-container'>
+          {
+            this.itemsOutput()
+          }
+        </div>
+      </React.Fragment>
     )
   }
 
@@ -64,6 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ReactDOM.render(
     <Search searchItems={data} />,
-    document.querySelector('#search-container')
+    document.querySelector('#topics-search-container')
   );
 });
