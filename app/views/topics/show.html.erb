@@ -25,16 +25,11 @@
   <p class='horizontal-text horizontal-text-left'>新しい</p>
 </div>
 
-<% @topic.posts.each do |post| %>
-  <div class='post-card'>
-    <%= link_to '', post, class: 'post-card-link-box' %>
-    <div class='post-card-title-container'>
-      <div class='post-card-bracket post-card-bracket-top-left'></div>
-      <div class='post-card-bracket post-card-bracket-bottom-right'></div>
-      <h3 class='post-card-title'><%= character_limit(post.title, 80) %></h3>
-    </div>
-    <p class='post-card-subtitle'><%= post.subtitle %></p>
-    <p class='post-card-timestamp'><%= render 'shared/timestamp', post: post %></p>
-  </div>
-<% end %>
+<%= javascript_pack_tag 'search'  %>
+<div id='topic-page-posts-search-container' ></div>
 
+
+<%= content_tag :div,
+  id: "search-data",
+  data: { search_group_name: 'topic-page-posts', search_items: @topic.posts.to_json, color: 'red' } do %>
+<% end %>

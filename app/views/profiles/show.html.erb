@@ -5,7 +5,7 @@
   <h1 class='subheading'>My Topics</h1>
 </div>
 
-<div id='topics-search-container' class='search-container' data=<%= @profile.topics.to_json %>></div>
+<div id='profile-page-topics-search-container' class='search-container' data=<%= @profile.topics.to_json %>></div>
 
 <div id='new-topic-form-container'></div>
 <div class='subheading-container'>
@@ -17,7 +17,7 @@
 <%= javascript_pack_tag 'search'  %>
 <%= javascript_pack_tag 'newTopicForm' %>
 <%= content_tag :div,
-  id: "topics-data",
+  id: "search-data",
   data: { search_group_name: 'profile-page-topics', search_items: @profile.topics.to_json, color: 'red' } do %>
 <% end %>
 
