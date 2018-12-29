@@ -86,12 +86,15 @@ body {
   border: 1px solid #C4C4C4;
   font-family: 'Bitter';
   color: transparent;
-  text-shadow: 0 0 0 #DD2120;
   text-align: center;
   width: 90%;
   height: 50px;
   font-size: 50px;
   margin: 40px 0;
+}
+
+.search-bar-red {
+  text-shadow: 0 0 0 #DD2120;
 }
 
 .search-bar:focus {

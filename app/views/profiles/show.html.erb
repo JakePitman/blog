@@ -18,7 +18,7 @@
 <%= javascript_pack_tag 'newTopicForm' %>
 <%= content_tag :div,
   id: "topics-data",
-  data: @profile.topics.to_json do %>
+  data: { search_items: @profile.topics.to_json, color: 'red' } do %>
 <% end %>
 
 <!--______________MY Friends_______________-->
