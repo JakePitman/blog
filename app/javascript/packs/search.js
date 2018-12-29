@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom';
 
 class Search extends React.Component {
 
+  state = {
+    searchItems: this.props.searchItems,
+    searchInput: null
+  }
+
+  updateSearchInput = (e) => {
+    this.setState({searchInput: e.target.value})
+  }
+
   characterLimit = (string, maximumCharacters) => {
     let result = null
     if (string.length > maximumCharacters) {
@@ -18,25 +27,30 @@ class Search extends React.Component {
     return result
   }
 
-  topicsData = () => {
+  itemsOutput = () => {
 
-    let topics = []
-    this.props.topics.forEach(topic => {
-      topics.push(
-        <div className='profile-page-link-container'>
-          <div className='color-fill'></div>
-          <a className='profile-page-link-inner-content' href={`/topic/${topic.id}`}>{this.characterLimit(topic.title, 20)}</a>
-        </div>
-      )
+    let searchItems = []
+    this.state.searchItems.forEach(searchItem => {
+      if ( this.state.searchInput == null || this.state.searchInput == '' || searchItem.title.toLowerCase().includes(this.state.searchInput.toLowerCase()) ) {
+        searchItems.push(
+          <div className='profile-page-link-container'>
+            <div className='color-fill'></div>
+            <a className='profile-page-link-inner-content' href={`/topic/${searchItem.id}`}>{this.characterLimit(searchItem.title, 20)}</a>
+          </div>
+        )
+      }
     })
 
-    return topics
+    return searchItems
   }
 
   render() {
     return (
       <div className='profile-page-links-container'>
-        {this.topicsData()}
+        <input type='text' id='search-input' placeholder='search' onChange={this.updateSearchInput}/>
+        {
+          this.itemsOutput()
+        }
       </div>
     )
   }
@@ -46,9 +60,10 @@ class Search extends React.Component {
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('topics-data')
   const data = JSON.parse(node.getAttribute('data'))
+  //const data = JSON.parse(node.dataset.items)
 
   ReactDOM.render(
-    <Search topics={data} />,
+    <Search searchItems={data} />,
     document.querySelector('#search-container')
   );
 });
