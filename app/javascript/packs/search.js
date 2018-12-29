@@ -46,7 +46,7 @@ class Search extends React.Component {
     return (
       <React.Fragment>
         <div className='search-bar-container'>
-          <input className={'search-bar' + ' ' + `search-bar-${this.props.color}`} type='text' id='search-input' placeholder='search' onChange={this.updateSearchInput}/>
+          <input className={'search-bar' + ' ' + `search-bar-${this.props.color}`} type='text' id={this.props.searchGroupName + '-search-input'} placeholder='search' onChange={this.updateSearchInput}/>
         </div>
         <div className='profile-page-links-container'>
           {
@@ -61,13 +61,12 @@ class Search extends React.Component {
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('topics-data')
-  //const data = JSON.parse(node.getAttribute('data'))
   const searchItems = JSON.parse(node.dataset.searchItems)
   const color = node.dataset.color
-  //const data = JSON.parse(node.dataset.items)
+  const searchGroupName = node.dataset.searchGroupName
 
   ReactDOM.render(
-    <Search searchItems={searchItems} color={color} />,
+    <Search searchGroupName={searchGroupName} searchItems={searchItems} color={color} />,
     document.querySelector('#topics-search-container')
   );
 });
