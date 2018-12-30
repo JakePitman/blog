@@ -112,6 +112,13 @@
   transition: all 0.3s;
 }
 
+.profile-page-link-inner-content-flex-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-page-link-inner-content {
   text-align: center;
   font-family: 'Arial Narrow';
@@ -119,15 +126,6 @@
   font-weight: lighter;
   letter-spacing: 5px;
   font-size: 50px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   animation-delay: all 1s;
 }
 

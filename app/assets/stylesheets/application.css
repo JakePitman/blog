@@ -101,3 +101,15 @@ body {
   outline: none;
   border: 1px solid #DD2120;
 }
+
+/*-----------------------------------COLOR-HIGHLIGHTING--------------------------------*/
+.red-highlight {
+  color: #DD2120;
+}
+.blue-highlight {
+  color: #4A7CFF;
+}
+
+.highlight-span-tag {
+  white-space: pre-wrap;
+}

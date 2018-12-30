@@ -1,19 +1,6 @@
 import React from 'react'
-
-const characterLimit = (string, maximumCharacters) => {
-  let result = null
-  if (string.length > maximumCharacters) {
-    result = string.substr(0, maximumCharacters) + '...'
-  } else {
-    result =  string
-  }
-  string.split(' ').forEach(word => {
-    if ( word.length > (maximumCharacters / 2) ) {
-      result = string.substr(0, (maximumCharacters / 2.5)) + '...'
-    }
-  })
-  return result
-}
+import characterLimit from '../../../helpers/characterLimit'
+import highlightSearchMatch from '../../../helpers/highlightSearchMatch'
 
 const searchItems = (props) => {
   let searchItems = []
@@ -22,7 +9,9 @@ const searchItems = (props) => {
       searchItems.push(
         <div className='profile-page-link-container' key={searchItem.id}>
           <div className='color-fill'></div>
-          <a className='profile-page-link-inner-content' href={`/topic/${searchItem.id}`}>{characterLimit(searchItem.title, 20)}</a>
+          <div className='profile-page-link-inner-content-flex-wrapper'>
+            <a className='profile-page-link-inner-content' href={`/topic/${searchItem.id}`}>{highlightSearchMatch(characterLimit(searchItem.title, 20), props.searchInput, 'red')}</a>
+          </div>
         </div>
       )
     }

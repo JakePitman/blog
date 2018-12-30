@@ -115,17 +115,18 @@
   border-bottom: 3px solid #dd2120;
 }
 
+.post-card-title-flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .post-card-title {
-  display: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 30px;
   font-family: 'bitter';
   text-align: center;
