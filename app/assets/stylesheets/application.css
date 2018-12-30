@@ -110,6 +110,10 @@ body {
   color: #4A7CFF;
 }
 
-.highlight-span-tag {
+.non-highlighted-span-tag {
   white-space: pre-wrap;
+}
+
+.highlighted-span-tag {
+
 }

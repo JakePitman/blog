@@ -9,8 +9,9 @@ const searchItems = (props) => {
       searchItems.push(
         <div className='profile-page-link-container' key={searchItem.id}>
           <div className='color-fill'></div>
+          <a className='profile-page-link-element' href={`/topic/${searchItem.id}`}></a>
           <div className='profile-page-link-inner-content-flex-wrapper'>
-            <a className='profile-page-link-inner-content' href={`/topic/${searchItem.id}`}>{highlightSearchMatch(characterLimit(searchItem.title, 20), props.searchInput, 'red')}</a>
+            <p className='profile-page-link-inner-content'>{highlightSearchMatch(characterLimit(searchItem.title, 20), props.searchInput, 'red')}</p>
           </div>
         </div>
       )

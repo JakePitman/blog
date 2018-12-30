@@ -21,13 +21,13 @@ const highlightSearchMatch = (string, substring, color) => {
   splitString.forEach((fragment, i) => {
     result.push(
       <React.Fragment>
-      <span className='highlight-span-tag'>{fragment}</span>
+      <span className='non-highlighted-span-tag'>{fragment}</span>
       {
         i == splitString.length - 1
         ?
         null
         :
-        <span className={color + '-highlight highlight-span-tag'}>{instances[i]}</span>
+        <span className={color + '-highlight highlighted-span-tag'}>{instances[i]}</span>
       }
       </React.Fragment>
     )
