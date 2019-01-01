@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   patch 'profile/:id', to: 'profiles#update'
 
   get 'pages/home'
+  get 'pages/about'
   root to: 'pages#home'
   match '*path', to: 'pages#index', via: :all
 end

@@ -1,6 +1,7 @@
 import React from 'react'
 import characterLimit from '../../../helpers/characterLimit'
 import highlightSearchMatch from '../../../helpers/highlightSearchMatch'
+import Timestamp from '../../timestamp'
 
 //const highlightSearchMatch = (string, substring, color) => {
   //return (
@@ -36,6 +37,4 @@ const searchItems = (props) => {
 
 //TODO put this back in, under the subtitle
 //<p className='post-card-timestamp'><%= render 'shared/timestamp', post: post %></p>
-//TODO refactor this with highlightSearchMatch
-//<h3 className='post-card-title'>{ characterLimit(searchItem.title, 80)  }</h3>
 export default searchItems
