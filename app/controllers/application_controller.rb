@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
   include Pundit
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :redirect_unless_signed_in, except: [:about]
+  before_action :redirect_unless_signed_in
 
   def redirect_unless_signed_in 
-    respond_to do |format|
-      unless current_user
-        format.html { redirect_to pages_about_path, notice: 'Please sign in or create an account to get started!' }
+    unless current_user
+      respond_to do |format|
+          format.html { redirect_to pages_about_path, notice: 'Please sign in or create an account to get started!' }
       end
     end
   end

@@ -27,7 +27,12 @@
 </div>
 <div class='post-show-content-container'>
   <div class='post-show-content-red-box'></div>
-  <h3 class='post-show-content'><%= @post.content %></h3>
+  <h3 class='post-show-content'>
+    <% @post.content.split("\n").each do |paragraph| %>
+      <%= paragraph %></br>
+    <% end %>
+  </h3>
+
   <div class='post-show-timestamp-container'>
     <%= render 'shared/timestamp', post: @post %>
   </div>
