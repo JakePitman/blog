@@ -1,0 +1,195 @@
+.about-page-welcome-container {
+  background: #7ff0ff;
+  width: 100%;
+  max-width: 1050px;
+  height: 0px;
+  position: relative;
+  overflow: hidden;
+  animation: container-animation 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes container-animation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+.about-page-welcome-square {
+  background: #f7f7f7;
+  width: 141px;
+  height: 141px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 50px;
+  opacity: 0;
+  z-index: 1;
+  animation: square-animation 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes square-animation {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+}
+
+.about-page-vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: absolute;
+  top: -100%;
+  left: 15px;
+  font-size: 35px;
+  z-index: 2;
+  opacity: 0;
+  animation: vertical-text-animation 1s forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes vertical-text-animation {
+  from {
+    opacity: 0;
+    top: -100%;
+  }
+  to {
+    opacity: 1;
+    top: 15px;
+  }
+}
+
+.about-page-horizontal-text {
+  position: absolute;
+  right: -100%;
+  font-size: 25px;
+  bottom: 15px;
+  animation: horizontal-text-animation 1s forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes horizontal-text-animation {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 15px;
+  }
+}
+
+.about-page-welcome-inner-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  font-size: 80px;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: inner-content-animation 1s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes inner-content-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-page-description-container {
+  margin: 50px 0;
+  width: 95%;
+  max-width: 1050px;
+  position: relative;
+}
+
+.about-page-options-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-page-option-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-page-description-content {
+  text-align: center;
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  font-size: 40px;
+  margin: 20px;
+  opacity: 0;
+  animation: description-content-animation 1s forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes description-content-animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.description-content-separator {
+  color: #c4c4c4;
+}
+
+.about-page-description-bracket {
+  height: 0;
+  opacity: 0;
+  width: 40px;
+  border-top: 3px solid #dd2120;
+  border-bottom: 3px solid #dd2120;
+  position: absolute;
+  animation: description-bracket-animation 1s forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes description-bracket-animation {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+.about-page-description-bracket-left {
+  border-left: 3px solid #dd2120;
+  left: 0;
+}
+
+.about-page-description-bracket-right {
+  border-right: 3px solid #dd2120;
+  right: 0;
+}
