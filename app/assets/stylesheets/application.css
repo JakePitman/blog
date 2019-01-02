@@ -27,6 +27,10 @@ body {
   align-items: center;
 }
 
+.bottom-spacer {
+  height: 50px;
+}
+
 .timestamp-username-link {
   color: #4a7cff;
   z-index: 2;
