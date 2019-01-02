@@ -1,3 +1,13 @@
+.form-title {
+  color: #4a7cff;
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-size: 80px;
+  border-left: 2px solid #dd2120;
+  border-right: 2px solid #dd2120;
+  padding: 0 30px;
+}
 .form-container {
   width: 100%;
   display: flex;
@@ -17,6 +27,7 @@ form {
 
 .form-input-field {
   outline: none;
+  font-family: 'Bitter';
   border: 3px solid #202020;
   width: 90%;
   margin: 20px 0;
@@ -45,6 +56,12 @@ form {
   height: 1000px;
 }
 
+.form-input-devise {
+  font-size: 30px;
+  height: 30px;
+  width: 50%;
+}
+
 .form-submit-btn {
   width: 50%;
   color: #4a7cff;
@@ -61,4 +78,39 @@ form {
 .form-submit-btn:hover {
   color: #f7f7f7;
   background: #4a7cff;
+}
+
+.form-devise-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-devise-label-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.form-devise-label-container i {
+  text-align: center;
+  font-family: 'Arial Narrow'
+}
+
+.form-devise-label {
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.devise-options-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.button_to {
+  text-align: center;
 }
