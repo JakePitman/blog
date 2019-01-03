@@ -1,14 +1,11 @@
 <%= form_for @topic do |f| %>
-  <div>
-    <%= f.text_field :title, placeholder: 'title' %>
-  </div>
+  <div class='form-container'>
+    <%= f.text_field :title, placeholder: 'title', class: 'form-input-field form-input-title' %>
 
-  <div>
-    <%= f.text_area :description, placeholder: 'description' %>
-  </div>
+    <%= f.text_area :description, placeholder: 'description', class: 'form-input-field form-input-subtitle' %>
 
-  <div>
-    <%= f.submit %>
+    <%= f.submit class: 'form-submit-btn' %>
   </div>
-
 <% end %>
+
+<%= link_to 'Back', profile_path(current_user), class: 'options-link' %>

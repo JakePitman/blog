@@ -3,7 +3,7 @@
 <%= render 'form', post: @post, topic: @topic %>
 
 <div>
-  <%= link_to 'Cancel', posts_path, class: 'options-link' %>
+  <%= link_to 'Cancel', Topic.find(params[:topic]), class: 'options-link' %>
 </div>
 
 <div class='bottom-spacer'>

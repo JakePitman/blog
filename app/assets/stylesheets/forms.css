@@ -72,6 +72,11 @@ form {
   margin: 5px 0;
 }
 
+.devise-checkbox {
+  height: 50px;
+  width: 30px;
+}
+
 form, .edit_user {
   margin: 30px 0;
 }
