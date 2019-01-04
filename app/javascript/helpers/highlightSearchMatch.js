@@ -5,6 +5,8 @@ const highlightSearchMatch = (string, substring, color) => {
   const splitString = string.toLowerCase().split(substring == null ? substring : substring.toLowerCase())
   const instances = []
 
+  //extract instances of substring in string, and push to instances array
+  //necessary in order to preserve capital letters when replacing with red span tags
   if (substring) {
     string.split('').forEach((char, i) => {
       if ( substring.toLowerCase() == string.substr(i, substring.length).toLowerCase() ) {
@@ -14,7 +16,7 @@ const highlightSearchMatch = (string, substring, color) => {
   }
 
 
-  substring == ''
+  substring == '' || substring == null
   ?
   result.push(string)
   :
@@ -33,15 +35,6 @@ const highlightSearchMatch = (string, substring, color) => {
     )
   })
   return (
-    //substring == ''
-    //?
-    //string
-    //:
-    //<span>
-      //{string.split(substring)[0]}
-      //<span className={color + '-highlight'}>{substring}</span>
-      //{string.split(substring)[1]}
-    //</span>
     result
   )
 }
