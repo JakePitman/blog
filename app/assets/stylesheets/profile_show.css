@@ -167,7 +167,14 @@
   max-width: 95%;
   margin: 10px 0;
   border: 3px solid #202020;
+  outline: none;
 }
+
+.new-topic-form-text:focus,
+.new-topic-form-text-area:focus {
+  border: 3px solid rgba(221, 33, 32, 0.7);
+}
+
 .new-topic-form-text {
   font-size: 30px;
   height: 50px;
