@@ -104,9 +104,18 @@ body {
   text-shadow: 0 0 0 #DD2120;
 }
 
-.search-bar:focus {
+.search-bar-blue {
+  text-shadow: 0 0 0 #4A7CFF;
+}
+
+.search-bar-red:focus {
   outline: none;
   border: 1px solid #DD2120;
+}
+
+.search-bar-blue:focus {
+  outline: none;
+  border: 1px solid #4A7CFF;
 }
 
 /*-----------------------------------COLOR-HIGHLIGHTING--------------------------------*/

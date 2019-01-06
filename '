@@ -1,0 +1,23 @@
+import React from 'react'
+
+class SearchContainer extends React.Component {
+  state = {}
+
+  render() {
+    return(
+      <div className='home-search-container'>
+        <div className={`japanese-btn japanese-btn-${ this.props.color }`} style={cursor: 'default'}>
+          <div className="inner-box inner-box-left"></div>
+          <h2 className="japanese-btn-inner-content">{ this.props.title }</h2>
+          <p className="vertical-text vertical-text-left">{ this.props.japaneseText }</p>
+          <p className="horizontal-text horizontal-text-right">探索</p>
+        </div>
+
+        <input className={`search-bar-${ this.props.color } search-bar-home`} type='text' id={ this.props.id } placeholder={ this.props.searchPlaceholder } />
+        <button className={`search-submit-home search-submit-home-${ this.props.color }`} type="submit">Search</button>
+      </div>
+    )
+  }
+}
+
+export default SearchContainer
